@@ -4,7 +4,7 @@ for i in x:
     i = int(i)
     y.append(i)
 print(y)
-while len(x) > 1:
+while len(y) > 1:
     total = sum(y) #12345
     y = [int(digit) for digit in str(total)]
 print(y[0])
