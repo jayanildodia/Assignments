@@ -2,11 +2,15 @@
 # number1 = 12, number2 = 18
 # LCM of 12 and 18 are: 36
 
-num1 = input("Enter Number 1: ")
-num2 = input("Enter Number 2: ")
-multiple_num1 = 1
-multiple_num2 = 1
+def gcd(a, b):
+    while b:
+        a, b = b, a % b
+    return a
 
-for i in range(1, ,1):
-    multiple_num1 = num1*i
-    list
+def lcm(a, b):
+    return a * b // gcd(a, b)
+
+num1 = int(input("Enter Number 1: "))
+num2 = int(input("Enter Number 2: "))
+result = lcm(num1, num2)
+print(f"LCM of {num1} and {num2} is: {result}")
